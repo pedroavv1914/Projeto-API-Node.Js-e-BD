@@ -66,6 +66,3 @@ app.delete('/usuarios/:id', async (req, res) => {
     res.status(200).json({ message: "Usuário deletado com sucesso!!!"})
 })
 
-app.listen(PORT, () => {
-    console.log(`Rodando na porta: http://localhost:${PORT}`);
-})
