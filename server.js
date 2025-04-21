@@ -8,7 +8,7 @@ const prisma = new PrismaClient()
 
 const app = express()
 app.use(express.json())
-app.use(cors('https://cadastro-usuarios-flax.vercel.app/'))
+app.use(cors('https://cadastro-usuarios-flax.vercel.app'))
 
 app.post('/usuarios', async (req, res) => {
     const user = await prisma.user.create({
