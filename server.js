@@ -2,6 +2,7 @@ import express from 'express'
 import pkg from './generated/prisma/index.js'
 import cors from 'cors'
 const { PrismaClient } = pkg
+const PORT = process.env.PORT || 3000;
 
 const prisma = new PrismaClient()
 
@@ -65,6 +66,6 @@ app.delete('/usuarios/:id', async (req, res) => {
     res.status(200).json({ message: "Usuário deletado com sucesso!!!"})
 })
 
-app.listen(3000, () => {
-    console.log("Rodando na porta: http://localhost:3000")
+app.listen(PORT, () => {
+    console.log(`Rodando na porta: http://localhost:${PORT}`);
 })
