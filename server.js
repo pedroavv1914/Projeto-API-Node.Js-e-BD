@@ -66,4 +66,6 @@ app.delete('/usuarios/:id', async (req, res) => {
     res.status(200).json({ message: "Usuário deletado com sucesso!!!"})
 })
 
-app.listen(PORT, () => {})
+app.listen(PORT, () => {
+    console.log('Server on');  
+})
